@@ -1,0 +1,32 @@
+service: my-serverless-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-southeast-1 # Chỉnh theo khu vực bạn muốn
+
+functions:
+  helloGet:
+    handler: handler.helloGet
+    events:
+      - http:
+          path: hello
+          method: get
+
+  helloPost:
+    handler: handler.helloPost
+    events:
+      - http:
+          path: hello
+          method: post
+
+  helloById:
+    handler: handler.helloById
+    events:
+      - http:
+          path: hello/{id}
+          method: get
+
+plugins:
+  - serverless-offline

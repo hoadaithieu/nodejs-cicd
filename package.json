@@ -1,0 +1,13 @@
+{
+  "name": "my-serverless-api",
+  "version": "1.0.0",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "offline": "serverless offline"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serverless": "^3.0.0",
+    "serverless-offline": "^12.0.0"
+  }
+}
